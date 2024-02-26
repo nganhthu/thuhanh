@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>Bài thi trắc nghiệm số 1</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="info-form">
+            <h2>Nhập thông tin sinh viên</h2>
+            <!--form nhập thông tin sinh viên-->
+            <form action="" id="student-infor-form">
+                <label for="fullname">Họ và tên: </label>
+                <input type="text" id="fullname" placeholder="Nhập đầy đủ họ tên..." required>
+                <br>
+                <label for="dob">Ngày sinh: </label>
+                <input type="date" id="dob" required>
+                <br>
+                <label for="student-id" >Mã sinh viên: </label>
+                <input type="text" id="student-id" placeholder="Nhập mã sinh viên..." required>
+                <br>
+                <label for="class">Lớp: </label>
+                <input type="text" id="class" placeholder="Nhập lớp..." required>
+            </form>
+            <button onclick="startQuiz()">Bắt đầu thi</button>
+        </div>
+
+        <div id="quiz" style="display: none;">
+            <!-- Giao diện câu hỏi -->
+            <h2>Bài thi số 1</h2>
+            <div id="group1" class="question-group">
+                <!-- Các câu hỏi Đúng/Sai sẽ được thêm ở đây bằng JavaScript -->
+            </div>
+            <div id="group2" class="question-group">
+                <!-- Các câu hỏi Chọn 1 trong 4 đáp án sẽ được thêm ở đây bằng JavaScript -->
+            </div>
+            <div id="group3" class="question-group">
+                <!-- Các câu hỏi Chọn Nhiều Đáp Án sẽ được thêm ở đây bằng JavaScript -->
+            </div>
+            <div id="group4" class="question-group">
+                <!-- Các câu hỏi Tự Luận sẽ được thêm ở đây bằng JavaScript -->
+            </div>
+            <button onclick="showQuestions('group1')">Trang 1</button>
+            <button onclick="showQuestions('group2')">Trang 2</button>
+            <button onclick="showQuestions('group3')">Trang 3</button>
+            <button onclick="showQuestions('group4')">Trang 4</button>
+            <button onclick="submitQuiz()">Nộp bài thi</button>
+        </div>
+
+        <script src="script.js">
+        </script>
+    </body>
+</html>
